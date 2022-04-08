@@ -19,28 +19,36 @@ body{
   background-color: rgb(248, 248, 248);
 }
 
+/* 네비바 */
 .navbar {
   background-color: rgb(248, 248, 248);
 }
-
 .navbar-brand {
   font-size: 40px;
   font-family: "GmarketSansBold";
   color: #6667ab;
 }
-
+.navbar-brand:hover, .navbar-brand:active {
+  color: #6667ab;
+}
 .write-btn{
   margin-top: 12px;
 }
-
 .btn{
   width: 100px;
   height: 40px;
   color: white;
   background-color: #6667ab;
+  border: 0;
   border-radius: 20px;
 }
-
+.btn:hover, .btn:active, .btn:focus {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #6667ab;
+  box-shadow: none;
+}
 .box {
   width: 80px;
 } 
@@ -49,15 +57,16 @@ body{
   height: 100%;
   object-fit: cover;
 }
-
 .dropdown-item{
   width: 20px;
 }
+/* 네비바 */
 
+/* 검색창 */
 .search {
   position: absolute;
   top: 20%;
-  left: 75%;
+  left: 70%;
   -webkit-transform: translateX(-100%) translateY(-0%);
           transform: translateX(-100%) translateY(-0%);
 }
@@ -83,7 +92,7 @@ body{
 }
 .search__field:focus {
   border-bottom-color: #6667ab;
-  width: 50vw;
+  width: 40vw;
   color: #2b2b2b;
   cursor: default;
 }
@@ -192,68 +201,46 @@ body{
   opacity: 1;
   visibility: visible !important;
 }
+/* 검색창 */
 
-
-
+/* 다크모드 */
 /* [data-theme="dark"] {
   background-color: #131313;
   color: #eee;
   transition: background-color 0.2s ease-in 0s;
 }
-
 [data-theme="dark"] .bg-black {
   background-color: #fff;
 }
-
 [data-theme="dark"] .bg-dark {
   background-color: #eee;
 }
-
 [data-theme="dark"] .bg-light {
   background-color: #131313;
 }
-
 [data-theme="dark"] .card {
   background-color: #0c0c0c;
 }
-
 [data-theme="dark"] .darkmode-text {
   color: white;
 }
-
 [data-theme="dark"] .video {
   background-color: #0c0c0c;
 } */
+/* 다크모드 */
 
-.list-group-item{
-  font-size: 25px;
-  font-family: "GmarketSansBold";
-  border-color: #ffffff00;
-  background-color: #ffffff00;
-  color: #6667ab;
-}
-
-/* .tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #6667ab;
-  position: relative;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-  font-size: x-large;
-  font-weight: bold;
-  border: 0;
-  color: #6667ab;
-} */
-
+/* 인기순,최신순 */
 .active-tab{
- text-decoration: none;
+  padding: 10px;
+  text-decoration: none;
 }
-
 .tabbable-line > .nav-tabs {
   border: none;
   margin: 0px;
 }
 .tabbable-line > .nav-tabs > li {
-  margin-right: 2px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .tabbable-line > .nav-tabs > li > a {
   font-size: x-large;
@@ -266,7 +253,7 @@ body{
   color: #6667ab;
 }
 .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid #8686a1;
+  border-bottom: 4px solid #6667ab;
 }
 .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
   border: 0;
@@ -275,9 +262,6 @@ body{
 }
 .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
   color: #6667ab;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
 }
 .tabbable-line > .nav-tabs > li.active {
   border-bottom: 4px solid #6667ab;
@@ -300,19 +284,165 @@ body{
 .portlet .tabbable-line > .tab-content {
   padding-bottom: 0;
 }
+/* 인기순,최신순 */
 
+/* 카드포스트 */
 .card{
   width: 31%;
   margin: 1%;
   padding: 0;
+  border: 0;
   border-radius: 5px;
+  transition: box-shadow 0.5s;
 }
-
+.card:hover, .card:active {
+  box-shadow: 0px 0px 10px 2px #6667ab;
+}
 .card-img{
   border: 0;
 }
-
 .card-link{
+  color: black;
+  font-size: small;
+  font-family: "GmarketSansBold";
+  text-decoration: none;
+}
+.card-img-profile{
+  width: 30px;
+}
+.card-profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.likey{
+  line-height: 0px;
+}
+/* 카드포스트 */
+
+/* 페이징 */
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
+  padding: 5px 12px;
+  color: #6667ab;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+.modal-3 a {
+  margin-left: 3px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.modal-3 a:hover {
+  color: white;
+  background-color: #6667ab;
+}
+.modal-3 a.active, .modal-3 a:active {
+  color: white;
+  background-color: #6667ab;
+}
+  /* 페이징 */
+
+
+  /* 아라-유저수정 */
+.form-control:active, .form-control:focus {
+  border-color: #6667ab;
+  outline: 0;
+  box-shadow: none;
+}
+
+.userupdate_box {
+  width: 60%;
+  background-color: rgb(201, 136, 233);
+  display: flex;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.update_box1 {
+  flex: 30%;
+  justify-content: center;
+  position: relative;
+}
+
+.update_box2 {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.update_box3 {
+  flex: 20%;
+  align-items: end;
+}
+
+.mb-3 {
+  width: 70%;
+}
+/* 아라-유저수정 */
+
+/* 현조-로그인폼 */
+.box1 {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box2 {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.box3 {
+  background-color: green;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.box4 {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 현조-로그인폼 */
+
+.login-form-btn{
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }

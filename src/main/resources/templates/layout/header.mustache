@@ -13,9 +13,9 @@
     <!-- 제이쿼리 추가 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- 섬머노트 추가 -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <!-- Quill 노트 추가 -->
+    <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
 
     <!-- 아이콘 추가 -->
     <script src="https://kit.fontawesome.com/caac0c247c.js" crossorigin="anonymous"></script>
@@ -49,16 +49,16 @@
 
         {{#principal}}
         <ul class="nav justify-content-end">
-            <li class="nav-item write-btn">
-                <a class="btn" href="/s/post/writeForm">새 글 쓰기</a>
+            <li class="nav-item">
+                <a class="btn" style="margin-top: 12px;" href="/s/post/writeForm">새 글 쓰기</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle box" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle profile-img" data-bs-toggle="dropdown">
                   <img src="image/coomon.jpg" alt="Profile" class="rounded-circle profile">
                 </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/s/user/blog">내블로그</a></li>
-                <li><a class="dropdown-item" href="/s/user/{id}">내정보</a></li>
+                <li><a class="dropdown-item" href="/s/user/update">내정보</a></li>
                 <li><a class="dropdown-item" href="/logout">로그아웃</a></li>
               </ul>
             </li>

@@ -51,7 +51,7 @@ public class UserService {
             User userEntity = userOp.get();
             userEntity.setPassword(updateDto.getPassword());
             userEntity.setEmail(updateDto.getEmail());
-            userEntity.setAddr(updateDto.getAddr());
+            // userEntity.setAddr(updateDto.getAddr());
             return userEntity;
         } else {
             throw new RuntimeException("아이디를 찾을 수 없습니다.");

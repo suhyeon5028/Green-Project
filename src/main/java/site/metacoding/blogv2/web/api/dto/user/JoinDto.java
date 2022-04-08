@@ -14,14 +14,14 @@ public class JoinDto {
     private String username;
     private String password;
     private String email;
-    private String addr;
+    // private String addr;
 
     public User toEntity() {
         User user = new User();
         user.setUsername(this.username);
         user.setPassword(this.password);
         user.setEmail(this.email);
-        user.setAddr(this.addr);
+        // user.setAddr(this.addr);
         return user;
     }
 }

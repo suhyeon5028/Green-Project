@@ -4,34 +4,29 @@
 <div class="container mt-3">
 
   <!-- 로그인 폼 시작 -->
-  <div class="box1">
+  <div class="box-form1">
     <form>
-      <div class="mb-3 mt-3">
-        <div class="box3">
-          <div class="box2">
-            <h1>glog</h1>
+        <div class="box-form2">
+          <div class="my-2 brand-logo">
+            Glog
           </div>
-          <div class="mb-3 mt-3">
-          <input id="username" type="text" class="form-control" placeholder="ID" required maxlength="12">
+          <div class="my-2">
+          <input id="username" type="text" class="form-control input-form" placeholder="ID" required maxlength="20">
+          <input id="password" type="password" class="form-control input-form" placeholder="Password" required maxlength="20">
           </div>
-          <div class="mb-3 mt-3">
-          <input id="password" type="password" class="form-control" placeholder="Password" required maxlength="12">
+          <div class="my-3">
+            <button id="btn-login" type="button" class="submit-btn">로그인</button>
           </div>
-          <div class="mb-3 mt-3">
-            <button id="btn-login" type="button" class="login-form-btn">로그인</button>
-          </div>
-            <div class="box4">
+            <div class="box-form3">
               <div>
                 <input type="checkbox" class="filled-in" checked="checked" />
-                <span>아이디 저장 </span>
+                <span>ID 저장 </span>
               </div>
               <div>
-                <a href="">회원가입</a>
+                <a href="/joinForm" class="my-link">회원가입</a>
               </div>
             </div>
         </div>
-      </div>
-      
     </form>
   </div>
   <!-- 로그인 폼 끝 -->

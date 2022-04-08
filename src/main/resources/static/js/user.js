@@ -84,7 +84,7 @@ async function join(){
         username: $("#username").val(),
         password: $("#password").val(),
         email: $("#email").val(),
-        addr: $("#addr").val(),
+        // addr: $("#addr").val(),
     }
     // (2) JSON으로 변환해서 fetch 요청한다. (통신의 표준이 제이슨이니까)
     let response = await fetch("/join",{

@@ -4,15 +4,16 @@
 <div class="container mt-3">
 
     <!-- 글쓰기 폼 시작 -->
+    <div>
     <form>
-        <div class="mb-3 mt-3">
-            <input id="title" type="text" class="form-control" placeholder="Enter title">
-        </div>
-        <div class="mb-3">
-            <textarea id="content" rows="10" class="form-control" id="content"></textarea>
-        </div>
-        <button id="btn-write" type="button" class="btn btn-dark">글쓰기</button>
+            <div id="editor">
+                <p>Hello World!</p>
+                <p>Some initial <strong>bold</strong> text</p>
+                <p><br></p>
+              </div>
+                <button class="btn btn-dark" id="btn-write" type="button">글쓰기</button>
     </form>
+</div>
     <!-- 글쓰기 폼 끝 -->
 
 </div>
@@ -51,9 +52,9 @@
 </script>
 
 <script>
-    $('#content').summernote({
-        height: 300
+    var quill = new Quill('#editor', {
+      theme: 'snow'
     });
-</script>
+  </script>
 
 {{> /layout/footer}}

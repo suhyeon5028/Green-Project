@@ -13,7 +13,7 @@ public class PostController {
 
     // 페이지를 줘
     // /s 붙었으니까 자동으로 인터셉터가 인증 체크함. (완)
-    @GetMapping("s/post/writeForm")
+    @GetMapping("s/post/write-form")
     public String writeForm() {
         return "post/writeForm";
     }

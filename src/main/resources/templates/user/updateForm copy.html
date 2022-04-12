@@ -50,7 +50,7 @@
         {{#principal}}
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="btn" style="margin-top: 12px;" href="/s/post/write-form">새 글 쓰기</a>
+                <a class="btn" style="margin-top: 12px;" href="/s/post/writeForm">새 글 쓰기</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle profile-img" data-bs-toggle="dropdown">
@@ -58,7 +58,7 @@
                 </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/s/user/blog">내블로그</a></li>
-                <li><a class="dropdown-item" href="/s/user/update-form">내정보</a></li>
+                <li><a class="dropdown-item" href="/s/user/updateForm">내정보</a></li>
                 <li><a class="dropdown-item" href="/logout">로그아웃</a></li>
               </ul>
             </li>
@@ -75,3 +75,49 @@
         </div>
     </nav>
     <!-- 네비게이션 끝 -->
+
+<!-- 컨테이너 시작 -->
+<div class="container mt-3">
+
+    <div class="userupdate_box">
+        <div class="update_box1">
+
+            <img src="dog.jpg" class="rounded" width="200px" height="200px">
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="container mt-3" class="update_box2">
+            <h2>내 정보 수정하기</h2>
+            <form action="/action_page.php">
+                <div class="mb-3 mt-3">
+                    <input type="email" class="form-control" id="email" placeholder="Username" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Blog name" name="pswd">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="비밀번호 수정" name="pswd">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="이메일 수정" name="pswd">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/user.js"></script>
+
+<!-- 컨테이너 끝 -->
+
+</body>
+
+</html>

@@ -1,9 +1,15 @@
 package site.metacoding.blogv2.domain.post;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-// Repository는 interface로 만들어야 한다.
-// 내부에 @Repository가 구현되어 있어서 생략 가능하다.
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
 public interface PostRepository extends JpaRepository<Post, Integer> {
+
+    @Query(value = "SELECT * FROM post WHERE title like %:keyword%", nativeQuery = true)
+
+    List<Post> mSearch(@Param("keyword") String keyword);
 
 }

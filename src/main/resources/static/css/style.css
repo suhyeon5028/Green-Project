@@ -1,22 +1,39 @@
 @font-face {
-  font-family: "GmarketSansBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
+  font-family: 'GimpoGothicBold00';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicBold00.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "GmarketSansLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
+  font-family: 'GimpoGothicRegular00';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicRegular00.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Orbit_of_moon';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Orbit_of_moon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* div{border: 1px solid black;} */
+
 body{
-  font-family: "GmarketSansLight";
+  font-family: 'GimpoGothicRegular00';
   background-color: rgb(248, 248, 248);
+}
+
+.brand-logo {
+  font-size: 70px;
+  font-family: 'Orbit_of_moon';
+  font-weight: 500;
+  color: #6667ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 네비바 */
@@ -24,8 +41,8 @@ body{
   background-color: rgb(248, 248, 248);
 }
 .navbar-brand {
-  font-size: 40px;
-  font-family: "GmarketSansBold";
+  font-size: 60px;
+  font-family: 'Orbit_of_moon';
   color: #6667ab;
 }
 .navbar-brand:hover, .navbar-brand:active {
@@ -39,15 +56,12 @@ body{
   height: 100%;
   object-fit: cover;
 }
-.dropdown-item{
-  width: 20px;
-}
 /* 네비바 */
 
 /* 검색창 */
 .search {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 70%;
   -webkit-transform: translateX(-100%) translateY(-0%);
           transform: translateX(-100%) translateY(-0%);
@@ -285,7 +299,10 @@ body{
 }
 .card-link{
   font-size: small;
-  font-family: "GmarketSansBold";
+  font-family: 'GimpoGothicBold00';
+}
+.card-title{
+  font-family: 'GimpoGothicBold00';
 }
 .card-img-profile{
   width: 30px;
@@ -354,6 +371,7 @@ body{
 .btn{
   width: 100px;
   height: 40px;
+  padding-top: 10px;
   color: white;
   background-color: #6667ab;
   border: 0;
@@ -369,6 +387,7 @@ body{
 .submit-btn{
   width: 100%;
   height: 50px;
+  padding-top: 5px;
   font-weight: bolder;
   background-color: #6667ab;
   color: white;
@@ -378,6 +397,7 @@ body{
 .cancel-btn{
   width: 100%;
   height: 50px;
+  padding-top: 5px;
   font-weight: bolder;
   background-color: rgb(172, 172, 172);
   color: white;
@@ -385,45 +405,6 @@ body{
   border-radius: 5px;
 }
 /* 버튼타입 */
-
-
-  /* 아라-유저수정 */
-.form-control:active, .form-control:focus {
-  border-color: #6667ab;
-  outline: 0;
-  box-shadow: none;
-}
-
-.userupdate_box {
-  width: 60%;
-  background-color: rgb(201, 136, 233);
-  display: flex;
-  margin-left: 20%;
-  justify-content: center;
-  align-items: center;
-}
-
-.update_box1 {
-  flex: 30%;
-  justify-content: center;
-  position: relative;
-}
-
-.update_box2 {
-  flex: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.update_box3 {
-  flex: 20%;
-  align-items: end;
-}
-
-.mb-3 {
-  width: 70%;
-}
-/* 아라-유저수정 */
 
 .input-form{
   width: 100%;
@@ -445,67 +426,117 @@ body{
   align-items: center;
 }
 
-
-.brand-logo {
-  font-size: 45px;
-  font-family: "GmarketSansBold";
-  color: #6667ab;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .my-link{
   color: black;
   text-decoration: none;
 }
+.my-link:hover{
+  color: black;
+  text-decoration: none;
+}
 
-/* 현조-내블로그 */
-.box1 {
-  background-color: yellow;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* 회원가입-나가기 */
+.exit-link{
+  color: white;
+  text-decoration: none;
 }
-.box2 {
-  background-color: violet;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 20%
+.exit-link:hover {
+  color: white;
 }
-.box3 {
-  background-color: greenyellow;
+/* 회원가입-나가기 */
+
+
+  /* 아라-유저수정 */
+  .form-control:active, .form-control:focus {
+    border-color: #6667ab;
+    outline: 0;
+    box-shadow: none;
+  }
+  
+  .userupdate_box {
+    width: 60%;
+    background-color: rgb(201, 136, 233);
+    display: flex;
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .update_box1 {
+    flex: 30%;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .update_box2 {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .update_box3 {
+    flex: 20%;
+    align-items: end;
+  }
+  
+  .mb-3 {
+    width: 70%;
+  }
+  /* 아라-유저수정 */
+
+
+/* 내블로그 */
+.blog-flex-around {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  justify-content: space-around;
 }
-.box4 {
-  background-color: wheat;
+.blog-flex-start {
   display: flex;
-  width: 20%;
+  justify-content: start;
 }
-.box5 {
-  background-color: blueviolet;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.box6 {
-  background-color: blue;
+.blog-flex-center {
   display: flex;
-  width: 100%;
+  justify-content: center;
+}
+.blog-flex-end {
+  display: flex;
   justify-content: end;
 }
-.box7 {
-  background-color: brown;
-  display: inline-block;
+.blog-user{
+  font-size: larger;
+  font-family: 'GimpoGothicBold00';
+}
+.blog-profile-img {
+  width: 120px;
+} 
+.blog-profile {
+  align-items: center;
+}
+.blog-search {
+  width: 180px;
+  margin-right: 25%;
+}
+.blog-card{
+  background-color: white;
   width: 100%;
 }
-.box8 {
-  background-color: greenyellow;
-  display: inline;
-  width: 100%;
+.blog-category {
+  width: 150px;
+} 
+.list-group-item{
+  height: 25px;
+  font-size: medium;
+  border: none;
+  background: none;
 }
-/* 현조-내블로그 */
+/* 내블로그 */
+
+.my-mtb{
+  margin: 30px 0;
+}
+.my-mb{
+  margin-bottom: 40px;
+}
+.my-mlr{
+  margin: 0 10px;
+}

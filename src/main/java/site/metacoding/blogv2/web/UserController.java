@@ -16,24 +16,24 @@ public class UserController {
 
     // 웹브라우저 -> 회원가입 페이지 주세요!
     // 앱 -> 회원가입 페이지 주세요! 말이안됨!
-    @GetMapping("/joinForm")
+    @GetMapping({ "/join-form" })
     public String joinForm() {
-        return "user/joinForm";
+        return "/user/joinForm";
     }
 
-    @GetMapping("/loginForm")
+    @GetMapping({ "/login-form" })
     public String loginForm() {
         return "user/loginForm";
     }
 
-    @GetMapping("s/user/blog")
+    @GetMapping("/s/user/blog")
     public String blog() {
         return "user/blog";
     }
 
     // 앱은 얘 요청안함
     // 웹은 얘 요청함
-    @GetMapping("/s/user/{id}")
+    @GetMapping("/s/user/update-form")
     public String userInfo(@PathVariable Integer id, Model model) {
         User userEntity = userService.회원정보(id);
         model.addAttribute("user", userEntity);

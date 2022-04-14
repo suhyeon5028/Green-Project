@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>블로그 V2</title>
+    <title>글하다</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
 
     <!-- CSS 추가 -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="\src\main\resources\static\css\style.css">
 </head>
 
 <body>
@@ -41,20 +41,13 @@
             </div>
           </form>
 
-          <!-- <div class="form-check form-switch">
-            <input type="checkbox" class="form-check-input" id="darkSwitch" />
-            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-          </div>
-          <script src="dark-mode-switch.min.js"></script> -->
-
-        {{#principal}}
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="btn" style="margin-top: 12px;" href="/s/post/writeForm">새 글 쓰기</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle profile-img" data-bs-toggle="dropdown">
-                  <img src="/image/coomon.jpg" alt="Profile" class="rounded-circle profile">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUZ_9tEpmdSFXY_yLnlAe6qR4yZ8Czl2mvw&usqp=CAU" alt="Profile" class="rounded-circle profile">
                 </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/s/user/blog">내블로그</a></li>
@@ -63,55 +56,40 @@
               </ul>
             </li>
         </ul>
-        {{/principal}}
-        {{^principal}}
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="btn" href="/login-form">로그인</a>
-            </li>
-        </ul>
-        {{/principal}}
-            
         </div>
     </nav>
     <!-- 네비게이션 끝 -->
 
 <!-- 컨테이너 시작 -->
-<div class="container mt-3">
-
-    <div class="userupdate_box">
-        <div class="update_box1">
-
-            <img src="dog.jpg" class="rounded" width="200px" height="200px">
-            <br />
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-        <div class="container mt-3" class="update_box2">
-            <h2>내 정보 수정하기</h2>
-            <form action="/action_page.php">
-                <div class="mb-3 mt-3">
-                    <input type="email" class="form-control" id="email" placeholder="Username" name="email">
+<div class="container">
+    <!-- 유저수정 폼 시작 -->
+    <div class="box-form1">
+        <div class="box-form5">
+            <div class="col-sm-3">
+                <div class="box-form4 my-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUZ_9tEpmdSFXY_yLnlAe6qR4yZ8Czl2mvw&usqp=CAU" class="rounded-circle" width="160px" height="160px">
                 </div>
-                <div class="mb-3">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Blog name" name="pswd">
+                <div class="box-form4 my-4">
+                    <button type="submit" class="image-upload-btn">이미지 업로드</button>
                 </div>
-                <div class="mb-3">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="비밀번호 수정" name="pswd">
-                </div>
-                <div class="mb-3">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="이메일 수정" name="pswd">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div>
-
+            </div>
+            <div class="mx-4 vl"></div>
+            <div class="box-form4 flex-grow-1">
+                <form class="my-3">
+                    <div class="box-form6">
+                        <input type="text" class="form-control update-input-form" id="profilename" placeholder="Profile name" maxlength="20">
+                        <input type="text" class="form-control update-input-form" id="blogname" placeholder="Blog name" maxlength="20">
+                        <input type="password" class="form-control update-input-form" id="password" placeholder="Password" maxlength="20">
+                        <input type="email" class="form-control update-input-form" id="email" placeholder="E-mail" maxlength="60">
+                    </div>
+                    <div class="blog-flex-end">                        
+                        <button type="submit" class="btn">수정하기</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-
+    <!-- 유저수정 폼 끝 -->
 </div>
 
 <script src="/js/user.js"></script>

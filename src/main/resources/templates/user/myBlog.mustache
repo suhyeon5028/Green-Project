@@ -14,13 +14,11 @@
             <img src="/image/coomon.jpg" alt="Profile" class="rounded-circle profile">
           </div>
           <div class="my-mlr">
-            {{#userEntity}}
+            {{#user}}
             <div class="blog-user">{{blogname}}</div>
-
-            <div>{{user}}</div>
-            <div>{{usertitle}}</div>
-
-            {{/userEntity}}
+            <div>{{blogtitle}}</div>
+            <div>{{username}}</div>
+            {{/user}}
           </div>
         </div>
         <hr />
@@ -132,4 +130,8 @@
 </div>
 <!-- 컨테이너 끝 -->
 
+
+<script>
+  console.log(userEntity);
+</script>
 {{> /layout/footer}}

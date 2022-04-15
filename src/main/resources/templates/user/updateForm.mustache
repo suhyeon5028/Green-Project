@@ -23,17 +23,17 @@
             <div class="box-form4 flex-grow-1">
                 <form class="my-3">
                     <div class="box-form6">
-                        <input type="hidden" id="id" value="{{principal.id}}">
-                        <input type="text" class="form-control update-input-form" value="{{principal.username}}"
+                        <input type="hidden" id="id" value="{{user.id}}">
+                        <input type="text" class="form-control update-input-form" value="{{user.username}}"
                             id="username" placeholder="username" maxlength="20" readonly>
-                        <input type="text" class="form-control update-input-form" value="{{principal.blogname}}"
+                        <input type="text" class="form-control update-input-form" value="{{user.blogname}}"
                             id="blogname" placeholder="blogname" maxlength="20" required>
                         <input type="text" class="form-control update-input-form" id="blogtitle" placeholder="blogtitle"
-                            maxlength="100">
-                        <input type="password" class="form-control update-input-form" value="{{principal.password}}"
+                            maxlength="100" value="{{user.blogtitle}}">
+                        <input type="password" class="form-control update-input-form" value="{{user.password}}"
                             id="password" placeholder="Password" maxlength="20" id="password" required>
-                        <input type="email" class="form-control update-input-form" value="{{principal.email}}"
-                            id="email" placeholder="E-mail" maxlength="60" id="email" required>
+                        <input type="email" class="form-control update-input-form" value="{{user.email}}" id="email"
+                            placeholder="E-mail" maxlength="60" id="email" required>
                     </div>
                     <div class="blog-flex-end">
                         <button id="btn-updateUse" type="button" class="btn" onclick="updateUser()">수정하기</button>
@@ -73,7 +73,7 @@
         console.log(responseParse);
         if (responseParse.code == 1) {
             alert("업데이트 성공");
-            location.href = `/`;
+            location.href = `/s/user/${id}`;
         } else {
 
             alert("업데이트 실패");

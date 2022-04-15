@@ -137,8 +137,10 @@ public class UserController {
     @GetMapping("/s/user/my-blog/{id}")
     public String myBlog(@PathVariable Integer id, Model model) {
         User userEntity = userService.회원정보(id);
-        model.addAttribute("user", userEntity);
+        System.out.println("==========================================");
         System.out.println(userEntity);
+        System.out.println("==========================================");
+        model.addAttribute("user", userEntity);
         return "/user/myBlog";
     }
 }

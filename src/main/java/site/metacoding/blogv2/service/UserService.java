@@ -46,6 +46,7 @@ public class UserService {
             userEntity.setBlogname(updateDto.getBlogname());
             userEntity.setPassword(updateDto.getPassword());
             userEntity.setEmail(updateDto.getEmail());
+            userEntity.setBlogtitle(updateDto.getBlogtitle());
             userEntity.setImgurl(updateDto.getImgurl());
         } else {
             throw new RuntimeException("아이디를 찾을 수 없습니다.");

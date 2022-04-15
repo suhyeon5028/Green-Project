@@ -46,6 +46,12 @@ public class User {
     @Column(length = 60, nullable = false)
     private String email;
 
+    private String imgurl; // 사진의 경로
+
+    private String blogname;
+
+    private String usertitle;
+
     @OneToMany(mappedBy = "user") // 연관관계의 주인의 변수명
     private List<Post> post;
 
@@ -60,9 +66,5 @@ public class User {
 
     @Transient
     private String remember;
-
-    private String imgurl; // 사진의 경로
-
-    private String blogname;
 
 }

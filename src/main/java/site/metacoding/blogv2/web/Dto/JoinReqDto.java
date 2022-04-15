@@ -15,12 +15,14 @@ public class JoinReqDto {
     private String password;
 
     private String email;
+    private String blogname;
 
     public User toEntity() {
         User user = new User();// null 없이 넣을것만 넣으면 된다.
         user.setUsername(username);
         user.setPassword(password);
         user.setEmail(email);
+        user.setBlogname(blogname);
         return user;
     }
 }

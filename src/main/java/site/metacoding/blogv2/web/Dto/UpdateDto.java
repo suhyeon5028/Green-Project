@@ -11,5 +11,6 @@ public class UpdateDto {
     private String blogname;
     private String password;
     private String email;
+    private String blogtitle;
     private String imgurl;
 }

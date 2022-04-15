@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.RequiredArgsConstructor;
@@ -101,8 +102,11 @@ public class UserController {
         return "redirect:/login-form"; // 로그인페이지 이동해주는 컨트롤러 메서드를 재활용
     }
 
-    @GetMapping("/s/user/update-form")
-    public String updateForm(Model model) {
+    @GetMapping("/s/user/{id}")
+    public String updateForm(@PathVariable Integer id, Model model) {
+        User userEntity = userService.회원정보(id);
+        model.addAttribute("user", userEntity);
+        System.out.println(userEntity);
         return "/user/updateForm";
     }
 
@@ -130,8 +134,11 @@ public class UserController {
     }
 
     // 내 블로그 연결
-    @GetMapping("/s/user/my-blog")
-    public String myBlog() {
+    @GetMapping("/s/user/my-blog/{id}")
+    public String myBlog(@PathVariable Integer id, Model model) {
+        User userEntity = userService.회원정보(id);
+        model.addAttribute("user", userEntity);
+        System.out.println(userEntity);
         return "/user/myBlog";
     }
 }

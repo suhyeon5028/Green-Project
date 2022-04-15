@@ -50,7 +50,8 @@ public class User {
 
     private String blogname;
 
-    private String usertitle;
+    @Column(nullable = true)
+    private String blogtitle;
 
     @OneToMany(mappedBy = "user") // 연관관계의 주인의 변수명
     private List<Post> post;

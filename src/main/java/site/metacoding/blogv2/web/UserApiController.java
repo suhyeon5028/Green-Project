@@ -14,7 +14,6 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.blogv2.domain.user.User;
 import site.metacoding.blogv2.domain.user.UserRepository;
 import site.metacoding.blogv2.service.UserService;
-import site.metacoding.blogv2.web.Dto.JoinReqDto;
 import site.metacoding.blogv2.web.Dto.ResponseDto;
 import site.metacoding.blogv2.web.Dto.UpdateDto;
 
@@ -22,9 +21,7 @@ import site.metacoding.blogv2.web.Dto.UpdateDto;
 @RestController
 public class UserApiController {
 
-    private final UserRepository userRepository;
     private final UserService userService;
-    private final HttpSession session;
 
     // @PostMapping("/join")
     // public ResponseDto<?> join(@RequestBody JoinReqDto joinReqDto) {
@@ -33,7 +30,7 @@ public class UserApiController {
     // return new ResponseDto<>(1, "회원가입성공", null);
     // }
 
-    @PutMapping("/s/api/user/{id}")
+    @PutMapping("/s/api/user/update/{id}")
     public ResponseDto<?> update(@PathVariable Integer id, @RequestBody UpdateDto updateDto) {
         userService.회원수정(id, updateDto);
         return new ResponseDto<>(1, "성공", null);

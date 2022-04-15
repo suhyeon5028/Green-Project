@@ -23,6 +23,7 @@
             <div class="box-form4 flex-grow-1">
                 <form class="my-3">
                     <div class="box-form6">
+                         <input type="hidden" id="id" value="{{principal.id}}">
                         <input type="text" class="form-control update-input-form" value="{{principal.username}}"
                             readonly id="username" placeholder="username" maxlength="20">
                         <input type="text" class="form-control update-input-form" id="blogname" placeholder="Blog name"
@@ -56,7 +57,7 @@
             imgurl: $("#imgurl").val(),
         }
 
-        let response = await fetch(`/s/api/user/${id}`, {
+        let response = await fetch(`/s/api/user/update/${id}`, {
             method: "PUT",
             body: JSON.stringify(updateDto),
             headers: {
@@ -67,7 +68,7 @@
         console.log(responseParse);
         if (responseParse.code == 1) {
             alert("업데이트 성공");
-            location.href = `/s/user/${id}`;
+            location.href = `/`;
         } else {
 
             alert("업데이트 실패");

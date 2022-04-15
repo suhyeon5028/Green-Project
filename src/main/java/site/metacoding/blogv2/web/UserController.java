@@ -70,13 +70,14 @@ public class UserController {
 
     }
 
+    // 로그아웃
     @GetMapping("/logout")
     public String logout() {
         session.invalidate();
         return "redirect:/login-form"; // PostController 만들고 수정하자.
     }
 
-    // 조인
+    // 회원가입
     @GetMapping("/join-form")
     public String joinForm() {
 
@@ -105,6 +106,7 @@ public class UserController {
         return "/user/updateForm";
     }
 
+    // 이미지업로드
     @PostMapping("/upload")
     // 버퍼로 파싱하는게 아니라 폼태그로 전송해서 바로 읽을 수 있다.
     public String upload(ImgDto imgDto) { // 버퍼로 읽는거 1. json 2. 있는 그대로 받고 싶을 때
@@ -127,4 +129,9 @@ public class UserController {
         return "/updateForm"; // ViewResolver 발동시키기 위해서는 Controller (파일리턴)
     }
 
+    // 내 블로그 연결
+    @GetMapping("/s/user/my-blog")
+    public String myBlog() {
+        return "/user/myBlog";
+    }
 }

@@ -5,13 +5,14 @@
 
     <!-- 글쓰기 폼 시작 -->
     <div>
-    <form>
-            <div id="editor">
-                <p>Hello World!</p>
-                <p>Some initial <strong>bold</strong> text</p>
-                <p><br></p>
-              </div>
-                <button class="btn btn-dark" id="btn-write" type="button">글쓰기</button>
+    <form action="/s/post" method="post">
+        <div class="mb-3 mt-3">
+            <input name="title" type="text" class="form-control" placeholder="Enter title">
+        </div>
+        <div class="mb-3">
+            <textarea name="content" rows="10" class="form-control" id="content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary">글쓰기</button>
     </form>
 </div>
     <!-- 글쓰기 폼 끝 -->
@@ -19,40 +20,9 @@
 </div>
 <!-- 컨테이너 끝 -->
 
-<script>
-    $("#btn-write").click(()=>{
-        write();
-    });
-
-    async function write(){
-        let writeDto = {
-            title: $("#title").val(),
-            content: $("#content").val()
-        }
-
-        console.log(writeDto);
-
-        let response = await fetch("/s/post", {
-            method: "POST",
-            body: JSON.stringify(writeDto),
-            headers: {
-                "Content-Type":"application/json; charset=utf-8"
-            }
-        });
-
-        let responseParse = await response.json();
-
-        if (responseParse.code == 1) {
-            alert("글쓰기 성공");
-            location.href = "/";
-        } else {
-            alert("글쓰기 실패");
-        }
-    }
-</script>
 
 <script>
-    var quill = new Quill('#editor', {
+    var quill = new Quill('#content', {
       theme: 'snow'
     });
   </script>

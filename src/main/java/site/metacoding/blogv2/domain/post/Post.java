@@ -46,7 +46,7 @@ public class Post {
     @Column(nullable = true)
     private String content;
 
-    @Column(length = 200, nullable = false)
+    @Column(length = 200, nullable = true)
     private String thumnail;
 
     @JsonIgnore

@@ -5,19 +5,24 @@
 
     <!-- 회원가입 폼 시작 -->
     <div class="box-form1">
-        <form>
             <div class="box-form2">
                 <div class="my-2 brand-logo">
                     글하다
                 </div>
-                <div class="my-2">
-                    <input id="username" type="text" class="form-control input-form" placeholder="ID" required maxlength="20">
-                    <input id="password" type="password" class="form-control input-form" placeholder="Password" required maxlength="20">
-                    <input id="email" type="email" class="form-control input-form" placeholder="E-mail" required maxlength="20">
-                </div>
-                <div class="box-form3 my-3">
-                    <button id="btn-cancel" type="button" class="cancel-btn"><a href="/login-form" class="exit-link">나가기</a></button>
-                    <button id="btn-join" type="button" class="submit-btn">회원가입</button>
+    <form action="/join" method="post">
+ <div class="my-2">
+            <input type="text" class="form-control input-form" placeholder="Enter username" name="username" id="username" maxlength="20" required/>
+        </div>
+ <div class="my-2">
+            <input type="password" class="form-control input-form" placeholder="Enter password" name="password" id="password" maxlength="20" required/>
+        </div>
+         <div class="my-2">
+            <input type="email" class="form-control input-form" placeholder="Enter email" name="email" id="email" maxlength="20" required/>
+        </div>
+                <div class="box-form3 my-3">    
+                <button type="submit" class="submit-btn">회원가입</button>
+                      </form>
+                    <button type="button" class="cancel-btn"><a href="/" class="exit-link">나가기</a></button>
                 </div>
             </div>
         </form>
@@ -26,7 +31,6 @@
 
 </div>
 
-<script src="/js/user.js"></script>
 
 <!-- 컨테이너 끝 -->
 

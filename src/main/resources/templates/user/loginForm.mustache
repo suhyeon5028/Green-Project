@@ -5,35 +5,37 @@
 
   <!-- 로그인 폼 시작 -->
   <div class="box-form1">
-    <form>
         <div class="box-form2">
           <div class="my-2 brand-logo">
             글하다
           </div>
+          <form action="/login" method="post">
           <div class="my-2">
-          <input id="username" type="text" class="form-control input-form" placeholder="ID" required maxlength="20">
-          <input id="password" type="password" class="form-control input-form" placeholder="Password" required maxlength="20">
+          <input type="text" class="form-control input-form" placeholder="ID" required maxlength="20" name="username" value="{{#remember}}{{remember}}{{/remember}}" />
+          </div>
+      <div class="my-2">
+    <input type="password" class="form-control input-form" placeholder="Password" required maxlength="20" name="password" />
           </div>
           <div class="my-3">
-            <button id="btn-login" type="button" class="submit-btn">로그인</button>
+            <button type="submit" class="submit-btn">로그인</button>
           </div>
             <div class="box-form3">
               <div>
-                <input type="checkbox" class="filled-in" checked="checked" />
-                <span>ID 저장 </span>
+                <label class="form-check-label">
+                <input class="filled-in" type="checkbox" name="remember"> ID저장
+            </label>
               </div>
+              </form>
               <div>
                 <a href="/join-form" class="my-link">회원가입</a>
               </div>
             </div>
         </div>
-    </form>
   </div>
   <!-- 로그인 폼 끝 -->
 
 </div>
 
-<script src="/js/user.js"></script>
 
 <!-- 컨테이너 끝 -->
 

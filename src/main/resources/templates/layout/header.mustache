@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-
+    
     <!-- CSS 추가 -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -34,12 +34,10 @@
         <div class="container">
           <a class="navbar-brand" href="/">글하다</a>
 
-          <form class="search">
-            <div class="search__wrapper">
-              <input type="text" name="" placeholder="검색어를 입력하세요" class="search__field">
-              <button type="submit" class="search__icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-          </form>
+        <form class="d-flex justify-content-end">
+                        <input id="keyword" name="keyword" class="me-2" type="text" placeholder="Search">
+                        <button id="btn-search" class="btn btn-primary" type="button">검색</button>
+                    </form>
 
           <!-- <div class="form-check form-switch">
             <input type="checkbox" class="form-check-input" id="darkSwitch" />

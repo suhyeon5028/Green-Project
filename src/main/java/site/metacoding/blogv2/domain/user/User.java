@@ -23,6 +23,8 @@ import lombok.NoArgsConstructor;
 import site.metacoding.blogv2.domain.comment.Comment;
 import site.metacoding.blogv2.domain.post.Post;
 
+import javax.persistence.Transient;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -55,5 +57,12 @@ public class User {
     private LocalDateTime createDate;
     @LastModifiedDate // update 할때만 동작
     private LocalDateTime updateDate;
+
+    @Transient
+    private String remember;
+
+    private String imgurl; // 사진의 경로
+
+    private String blogname;
 
 }

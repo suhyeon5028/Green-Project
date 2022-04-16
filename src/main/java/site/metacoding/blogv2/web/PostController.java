@@ -1,7 +1,5 @@
 package site.metacoding.blogv2.web;
 
-import java.util.Optional;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.http.ResponseEntity;
 
 import lombok.RequiredArgsConstructor;
 import site.metacoding.blogv2.domain.post.Post;

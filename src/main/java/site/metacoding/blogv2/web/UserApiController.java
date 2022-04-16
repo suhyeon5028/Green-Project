@@ -1,18 +1,13 @@
 package site.metacoding.blogv2.web;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import site.metacoding.blogv2.domain.user.User;
-import site.metacoding.blogv2.domain.user.UserRepository;
 import site.metacoding.blogv2.service.UserService;
 import site.metacoding.blogv2.web.Dto.ResponseDto;
 import site.metacoding.blogv2.web.Dto.UpdateDto;

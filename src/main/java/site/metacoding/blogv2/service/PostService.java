@@ -55,4 +55,8 @@ public class PostService {
         }
     }
 
+    public Page<Post> 유저글목록보기(Integer userId, String mykeyword, Pageable pageable) {
+        return postRepository.mfindByUserID(userId, mykeyword, pageable);
+    }
+
 }

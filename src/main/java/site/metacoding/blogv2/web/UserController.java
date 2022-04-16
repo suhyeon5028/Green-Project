@@ -21,7 +21,6 @@ import site.metacoding.blogv2.domain.user.User;
 import site.metacoding.blogv2.domain.user.UserRepository;
 import site.metacoding.blogv2.service.UserService;
 import site.metacoding.blogv2.web.Dto.ImgDto;
-import site.metacoding.blogv2.web.Dto.JoinReqDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -134,12 +133,9 @@ public class UserController {
     }
 
     // 내 블로그 연결
-    @GetMapping("/s/user/my-blog/{id}")
-    public String myBlog(@PathVariable Integer id, Model model) {
-        User userEntity = userService.회원정보(id);
-        System.out.println("==========================================");
-        System.out.println(userEntity);
-        System.out.println("==========================================");
+    @GetMapping("/s/user/my-blog/{userId}")
+    public String myBlog(@PathVariable Integer userId, Model model) {
+        User userEntity = userService.회원정보(userId);
         model.addAttribute("user", userEntity);
         return "/user/myBlog";
     }

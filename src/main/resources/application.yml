@@ -4,22 +4,22 @@ server:
     context-path: /
     encoding:
       charset: utf-8
-  session:
+    session:
       timeout: 30
 
 spring:
   mustache:
     expose-session-attributes: true
   datasource:
-      url: jdbc:mysql://localhost:3306/test1
-      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mariadb://localhost:3306/glog 
+      driver-class-name: org.mariadb.jdbc.Driver
       username: green
       password: green1234
 
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: update  
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true

@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -52,13 +53,6 @@ public class User {
 
     @Column(nullable = true)
     private String blogtitle;
-
-    @OneToMany(mappedBy = "user") // 연관관계의 주인의 변수명
-    private List<Post> post;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "user") // 연관관계의 주인의 변수명
-    private List<Comment> comments;
 
     @CreatedDate // insert 할때만 동작
     private LocalDateTime createDate;

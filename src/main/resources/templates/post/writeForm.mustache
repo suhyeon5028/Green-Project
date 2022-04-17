@@ -1,25 +1,21 @@
-{{> /layout/header}}
+{{> /post/header}}
 
-<!-- 컨테이너 시작 -->
-<div class="container mt-3">
-
-    <!-- 글쓰기 폼 시작 -->
-    <div>
+<!-- 글쓰기 폼 시작 -->
+<div class="write-form">
     <form action="/s/post" method="post">
         <div class="mb-3 mt-3">
             <input name="title" type="text" class="form-control" placeholder="Enter title">
         </div>
         <div class="mb-3">
-            <textarea name="content" rows="10" class="form-control" id="content"></textarea>
+            <textarea name="content" class="form-control" rows="34vh" id="content"></textarea>
         </div>
-        <button type="submit" class="btn btn-secondary">글쓰기</button>
+        <div class="box-form3">
+            <button class="back-btn" type="button" onclick="location.href='/'">나가기</button>
+            <button class="btn" type="submit">글쓰기</button>
+        </div>
     </form>
 </div>
-    <!-- 글쓰기 폼 끝 -->
-
-</div>
-<!-- 컨테이너 끝 -->
-
+<!-- 글쓰기 폼 끝 -->
 
 <script>
     var quill = new Quill('#content', {

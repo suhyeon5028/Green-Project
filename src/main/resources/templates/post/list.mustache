@@ -19,7 +19,7 @@
   <!-- 탭 끝 -->
 
     <!-- 게시글 아이템 시작 -->
-  <div class="row d-flex justify-content-between" id="post-box">
+  <div class="row row-cols-3 list-form" id="post-box">
 
 
 </div>
@@ -101,7 +101,7 @@
 
     function postItemRender(post) {
         return `
-    <div class= "col-3 card">
+    <div class= "col card">
       <img class="card-img-top" src="/image/Very_Peri.jpg" alt="Card image">
       <div class="card-body">
         <h4 class="card-title"> <a href="/post/${post.id}">${post.title}</a></h4>
